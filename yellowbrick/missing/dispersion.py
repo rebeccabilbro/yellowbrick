@@ -14,16 +14,12 @@
 ##########################################################################
 
 import numpy as np
-import matplotlib.pyplot as plt
-
-from yellowbrick.utils import is_dataframe
-from yellowbrick.utils import is_structured_array
+# from yellowbrick.utils import is_dataframe
+# from yellowbrick.utils import is_structured_array
 from .base import MissingDataVisualizer
 
-# from yellowbrick.style.colors import resolve_colors
-
 ##########################################################################
-## Feature Visualizer
+## MissingValuesDispersion Visualizer
 ##########################################################################
 
 class MissingValuesDispersion(MissingDataVisualizer):
@@ -54,8 +50,7 @@ class MissingValuesDispersion(MissingDataVisualizer):
         draws each instance as a class or target colored point, whose location
         is determined by the feature data set.
         """
-        width = 0.5  # the width of the bars
-        nan_locs = self.get_nan_locs(self, X, y=y)
+        nan_locs = self.get_nan_locs(X, y=y)
         x, y = list(zip(*nan_locs))
         self.ax.scatter(x, y, alpha=0.5, marker="|")
 
@@ -75,7 +70,7 @@ class MissingValuesDispersion(MissingDataVisualizer):
         )
         tick_locations = np.arange(len(self.features_))  # the x locations for the groups
         # Remove the ticks from the graph
-        self.ax.set_xlabel('Count')
+        self.ax.set_xlabel('Locations of Missing Values')
         self.ax.set_yticks(tick_locations)
         self.ax.set_yticklabels(self.features_)
         # Add the legend

@@ -24,10 +24,9 @@ To Include:
 ##########################################################################
 
 import numpy as np
-import matplotlib.pyplot as plt
 
-from yellowbrick.utils import is_dataframe
-from yellowbrick.utils import is_structured_array
+# from yellowbrick.utils import is_dataframe
+# from yellowbrick.utils import is_structured_array
 from .base import MissingDataVisualizer
 
 # from yellowbrick.style.colors import resolve_colors
@@ -69,7 +68,7 @@ class MissingValuesBar(MissingDataVisualizer):
 
         width = 0.5  # the width of the bars
         self.ind = np.arange(len(self.features_))  # the x locations for the groups
-        self.ax.bar(self.ind - width/2, nan_col_counts, width,
+        self.ax.barh(self.ind - width/2, nan_col_counts, width,
                         color='black')
 
     def finalize(self, **kwargs):
@@ -88,8 +87,8 @@ class MissingValuesBar(MissingDataVisualizer):
         )
         tick_locations = np.arange(len(self.features_))  # the x locations for the groups
         # Remove the ticks from the graph
-        self.ax.set_ylabel('Count')
-        self.ax.set_xticks(tick_locations)
-        self.ax.set_xticklabels(self.features_, rotation='vertical')
+        self.ax.set_xlabel('Count')
+        self.ax.set_yticks(tick_locations)
+        self.ax.set_yticklabels(self.features_)
         # Add the legend
         self.ax.legend(loc='best')

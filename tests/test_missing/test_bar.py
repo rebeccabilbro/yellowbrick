@@ -16,11 +16,9 @@ Tests for the MissingValuesBar visualizations.
 ##########################################################################
 ## Imports
 ##########################################################################
-import unittest
-import numpy.testing as npt
+from sklearn.datasets import make_classification
 
 from tests.base import VisualTestCase
-from tests.dataset import DatasetMixin
 from yellowbrick.missing.bar import *
 
 try:
@@ -32,21 +30,24 @@ except ImportError:
 ## Feature Importances Tests
 ##########################################################################
 
-class TestFeatureImportancesVisualizer(VisualTestCase, DatasetMixin):
+class TestFeatureImportancesVisualizer(VisualTestCase):
     """
     FeatureImportances visualizer
     """
 
-    def test_integration_feature_importances(self):
+    def test_missingvaluesbar(self):
         """
         Integration test of visualizer with feature importances param
         """
-        mushrooms = self.load_data('mushroom')
-        features = ['shape', 'surface', 'color']
-        target   = ['target']
-        X = mushrooms[features].as_matrix()
-        y = mushrooms[target].as_matrix()
+        X, y = make_classification(
+            n_samples=400, n_features=20, n_informative=8, n_redundant=8,
+            n_classes=2, n_clusters_per_class=4, random_state=854
+        )
 
+        # add nan values to a range of values in the matrix
+        X[X > 1.5] = np.nan
+
+        features = [str(n) for n in range(20)]
         viz = MissingValuesBar(features=features)
         viz.fit(X, y=y)
         viz.poof()

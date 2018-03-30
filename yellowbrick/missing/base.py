@@ -10,19 +10,14 @@
 # ID: base.py [] nathan.danielsen@gmail.com.com $
 
 """
-Base classes for feature visualizers and feature selection tools.
+Base classes for missing values visualizers and related tools.
 """
 
 ##########################################################################
 ## Imports
 ##########################################################################
 
-import numpy as np
-
 from yellowbrick.features.base import DataVisualizer
-from yellowbrick.utils import is_dataframe, is_structured_array
-from sklearn.base import TransformerMixin
-
 
 ##########################################################################
 ## Feature Visualizers

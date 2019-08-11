@@ -4,7 +4,7 @@
 # Author:  Benjamin Bengfort <benjamin@bengfort.com>
 # Created: Sun Aug 19 10:35:50 2018 -0400
 #
-# ID: draw.py [] benjamin@bengfort.com $
+# ID: draw.py [dd915ad] benjamin@bengfort.com $
 
 """
 Utilities for common matplotlib drawing procedures.

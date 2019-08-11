@@ -7,7 +7,7 @@
 # Copyright (C) 2018 District Data Labs
 # For license information, see LICENSE.txt
 #
-# ID: test_bar.py [7d3f5e6] nathan.danielsen@gmail.com $
+# ID: test_bar.py [1443e16] ndanielsen@users.noreply.github.com $
 
 """
 Tests for the MissingValuesBar visualizations.

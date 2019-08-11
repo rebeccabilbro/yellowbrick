@@ -7,7 +7,7 @@
 # Author:   Benjamin Bengfort <@bbengfort>
 # Created:  Tue May 23 18:34:27 2017 -0400
 #
-# ID: test_pca.py [] cmorales@pacificmetrics.com $
+# ID: test_pca.py [5539f60] benjamin@bengfort.com $
 
 """
 Tests for the PCA based feature visualizer.

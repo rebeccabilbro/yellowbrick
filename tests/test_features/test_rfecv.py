@@ -4,7 +4,7 @@
 # Author:  Benjamin Bengfort <benjamin@bengfort.com>
 # Created: Tue Apr 03 17:35:16 2018 -0400
 #
-# ID: test_rfecv.py [] benjamin@bengfort.com $
+# ID: test_rfecv.py [6e1099d] benjamin@bengfort.com $
 
 """
 Tests for the RFECV visualizer

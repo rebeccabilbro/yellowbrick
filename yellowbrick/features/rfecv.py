@@ -4,7 +4,7 @@
 # Author:  Benjamin Bengfort <benjamin@bengfort.com>
 # Created: Tue Apr 03 17:31:37 2018 -0400
 #
-# ID: rfecv.py [] benjamin@bengfort.com $
+# ID: rfecv.py [6e1099d] benjamin@bengfort.com $
 
 """
 Visualize the number of features selected using recursive feature elimination

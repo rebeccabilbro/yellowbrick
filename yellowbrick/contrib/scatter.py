@@ -6,7 +6,7 @@
 #
 # For license information, see LICENSE.txt
 #
-# ID: scatter.py [fc94ec4] ndanielsen@users.noreply.github.com $
+# ID: scatter.py [a89633e] benjamin@bengfort.com $
 """
 Implements a 2D scatter plot for feature analysis.
 """

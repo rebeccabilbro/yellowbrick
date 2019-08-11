@@ -7,7 +7,7 @@
 # Copyright (C) 2016 District Data Labs
 # For license information, see LICENSE.txt
 #
-# ID: conftest.py [] benjamin@bengfort.com $
+# ID: conftest.py [957cd53] benjamin@bengfort.com $
 
 """
 Global definitions for Yellowbrick PyTest

@@ -7,7 +7,7 @@
 # Copyright (C) 2016 District Data Labs
 # For license information, see LICENSE.txt
 #
-# ID: images.py [] benjamin@bengfort.com $
+# ID: images.py [ab37b18] benjamin@bengfort.com $
 
 """
 Helper utility to manage baseline images for image comparisons. Usage:
